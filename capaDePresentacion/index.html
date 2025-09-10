@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Taller de Personas y Cuentas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+
+    <h2>Registrar Persona</h2>
+    <form id="formPersona">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+        <button type="submit">Agregar Persona</button>
+    </form>
+
+    <h2>Registrar Cuenta</h2>
+    <form id="formCuenta">
+        <input type="text" id="numeroCuenta" placeholder="Número de Cuenta" required>
+        <input type="number" id="saldo" placeholder="Saldo inicial" required>
+        <select id="tipo">
+            <option value="Ahorros">Ahorros</option>
+            <option value="Corriente">Corriente</option>
+        </select>
+        <select id="personaSelect"></select>
+        <button type="submit">Agregar Cuenta</button>
+    </form>
+    <h2>Registrar Empresa</h2>
+    <form id="formEmpresa">
+        <input type="text" id="rit" placeholder="RIT" required>
+        <input type="text" id="nombreEmpresa" placeholder="Nombre Empresa" required>
+        <input type="text" id="direccion" placeholder="Dirección" required>
+        <button type="submit">Agregar Empresa</button>
+    </form>
+
+
+    <h2>Asociar Personas-Empresa</h2>
+    <form id="formAsociarPersonaEmpresa">
+        <select id="empresaSelect">
+            <option value="">Seleccionar empresa...</option>
+        </select>
+        <select id="personaSelectAsociar">
+            <option value="">Seleccionar persona...</option>
+        </select>
+        <button type="submit">Asociar</button>
+    </form>
+    <h2>Cuentas Registradas</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Saldo</th>
+                <th>Tipo</th>
+                <th>Persona</th>
+                <th>Empresa</th>
+            </tr>
+        </thead>
+        <tbody id="tablaCuentas"></tbody>
+    </table>
+    <div id="estadisticasSection">
+        <h2>Estadísticas de Cuentas</h2>
+        <p>Cantidad total de cuentas: <span id="cantidadCuentas">0</span></p>
+        <p>Cantidad de cuentas Ahorros: <span id="cantidadAhorros">0</span></p>
+        <p>Cantidad de cuentas Corriente: <span id="cantidadCorriente">0</span></p>
+        <p>Total valor de todas las cuentas: <span id="totalValor">0</span></p>
+        <p>Total valor de cuentas Ahorros: <span id="totalAhorros">0</span></p>
+        <p>Total valor de cuentas Corriente: <span id="totalCorriente">0</span></p>
+    </div>
+    <script src="../capaDeAccesoADatos/entitys/Persona.js"></script>
+    <script src="../capaDeAccesoADatos/entitys/Cuenta.js"></script>
+    <script src="../capaDeAccesoADatos/entitys/Empresa.js"></script>
+
+    <script src="../capaDeAccesoADatos/repositorios/PersonaRepository.js"></script>
+    <script src="../capaDeAccesoADatos/repositorios/CuentaRepository.js"></script>
+    <script src="../capaDeAccesoADatos/repositorios/EmpresaRepository.js"></script>
+
+
+    <script src="../fachadaServices/gestionarPersonasServices.js"></script>
+    <script src="../fachadaServices/gestionarCuentasServices.js"></script>
+    <script src="../fachadaServices/gestionarEmpresasServices.js"></script>
+
+    <script src="logicaCuenta.js"></script>
+    <script src="logicaPersona.js"></script>
+    <script src="logicaEmpresa.js"></script>
+    <script src="logica.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+/* Reset básico para eliminar márgenes y paddings predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Contenedor principal para centrar el contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Estilo para las secciones de formularios */
+.section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.section:hover {
+  transform: translateY(-2px);
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Estilo para formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+select {
+  width: 200px;
+}
+
+/* Estilo para la tabla */
+#tablaCuentas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#tablaCuentas th,
+#tablaCuentas td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#tablaCuentas th {
+  background-color: #3498db;
+  color: white;
+}
+
+#tablaCuentas tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#tablaCuentas tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilo para la sección de estadísticas */
+#estadisticasSection {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#estadisticasSection h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+#estadisticasSection p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#estadisticasSection span {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  #tablaCuentas th,
+  #tablaCuentas td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
